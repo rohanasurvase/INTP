@@ -1,0 +1,124 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	background: E5E5E5;
+	font-weight: 300;
+}
+.container {
+	width:80%;
+	margin: 0 auto;
+}
+
+/*This is PC ka section niche ka matlab? tera PC ka code would go inside  this */
+@media (min-width:720px){
+
+
+	.row{
+	display: flex;
+}
+.logo {
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-left: 35%;
+}
+h3{
+	display: flex;
+}
+.asterisk{
+	background: url('./asterisk-solid.svg');
+	background-repeat: no-repeat;
+	background-size: 1em;
+	width:1em;
+	height:1em;
+	background-position: center;
+}
+#nav{
+float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+.nav li{
+    display:inline;
+    padding-left: 30px
+}
+.nav a{
+    display:inline-block;
+    padding: 15px;
+
+}
+
+.nav .search-container{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+
+}
+.Book{
+	padding-top: 45px;
+}
+
+.single-product{
+	margin-top: 50px;
+}
+
+.single-product .col-2 img{
+	padding: 0;
+}
+.single-product .col-2{
+	padding: 20px;
+}
+.single-product h3{
+	margin:20px 0;
+	font-size: 22px;
+	font-weight:bold;
+}
+.single-product input{
+	width: 50px;
+	height:40px;
+	padding-left: 10px;
+	font-size: 20px;
+	margin-right: 10px;
+	border: 1px solid #fffff;
+}
+
+.single-product .button{
+	  background-color:#000000;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+ border-radius: 12px;
+  margin: 4px 2px;
+}
+
+input:focus{
+	outline: none;
+}
+.single-product .fa{
+	color: #ff523b;
+	margin-left: 10px;
+}
+}
