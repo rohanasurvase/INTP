@@ -1,0 +1,124 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	outline:  none;
+	background:white;
+	font-weight: 300;
+}
+.container {
+	width:95%;
+	margin: 0 auto;
+}
+
+.row{
+	display: flex;
+}
+
+img{
+	max-width: 100%
+}
+
+.long-desc{
+	text-align: justify;
+}
+/*This is PC ka section niche ka matlab? tera PC ka code would go inside  this */
+@media (min-width:720px){
+
+
+	
+.logo {
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-left: 35%;
+}
+h3{display:flex;
+}
+.asterisk{
+	background: url('./asterisk-solid.svg');
+	background-repeat: no-repeat;
+	background-size: 1em;
+	width: 1em;
+	height: 1em;
+	background-position: center;
+}
+
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+.nav li{
+    display:inline;
+    padding-left: 30px
+}
+.nav a{
+    display:inline-block;
+    padding: 15px;
+}
+.nav .search-container{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.single-product{
+	margin-top: 50px;
+}
+.single-product .col-2 img{
+	padding: 0;
+}
+.single-product .col-2{
+	padding: 1.5em;
+}
+.image-container{
+	/*border:1px solid red;*/
+	max-width: 25em;
+	/*height:30em;*/
+}
+/*margin:20px 0;*/
+	font-size: 1.3rem;
+	/*font-weight:bold;*/
+}
+
+.single-product input{
+	width: 5em;
+	height:2em;
+	padding-left: 0.5em;
+	font-size: 1.2rem;
+	margin-right: 1em;
+	/*border: 1px solid #fff;*/
+}
+.button{
+	background-color:#000000;
+	border: none;
+	color: white;
+	padding: 0.5em 4em;
+	text-align: center;
+	text-decoration: none;
+	/*display: inline-block;*/
+	font-size: 1.2rem;
+	border-radius: 12px;
+ 	/*margin: 4px 5px;*/
+}
+input:focus{
+	outline: none;
+}
+.single-product .fa{
+	color: #ff523b;
+	margin-left: 10px;
+}
+
+h3{@media (min-width:720px){
+
+
+	.row{
+	display: flex;
+}
