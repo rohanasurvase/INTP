@@ -3,16 +3,16 @@
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Don't do this ..ICon ka bolta hu wait okay  -->
-<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-<title>Nvbar</title>
+
+<title>PRODUCT DESCRIPTION</title>
 </head>
 <body>
+
 	<?php
 		include('db.php');
 		$row='';
-		$sql = "SELECT * FROM product";
-		// $result = mysqli_query($conn, $sql);
+		$sql = "SELECT * FROM product where Pro_id=11";
+		// $result = mysqli_query($conn, $sql);20
 		// echo("ABC ".$result);
 		if ($result = mysqli_query($conn,$sql)) {
 		  $row = mysqli_fetch_assoc($result);
@@ -41,49 +41,56 @@
 </header> 
 
 <div class="small-container single-product">
-	<div class="row">
+		<div class="row container">
 		<!-- Image -->
-		<div class="col-2">
-			<img src ="./assets/Book.png" class="Book">
+		<div class="image-container">
+			 
+			<img src ="<?php 
+				echo $row['Pro_image'];
+			
+				?>" class="image">
 		</div>
 		<!-- Description-->
-		<div class="col-2">
+		<div class="product-desc col-2">
+			<div class="container">
 			<h1>  
-					<!-- Name -->
+				 <?php 
+				echo $row['Pro_name'];
+			
+				?>
 			</h1>
 			<h3>
-				$10
+				Rs.
+				 <?php 
+				echo $row['Pro_cost'];
+			
+				?>
+				
 				<!-- Cost -->
 			</h3>
 			<p>Inclusive of all tax</p>
-			<input type="number" value="1">
-			<a href="" class="button"> Add to cart </a>
-			<h3> Product Details <span class="asterisk"></span> </h3>
-			<p> 
-
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-				<!-- <?php 
+			<input type="number" class='quantity' value="1">
+			<button class="cart-button"> Add to cart </button>
+			<h3 class="product-details-head"> Product Details: <span class="asterisk"></span> </h3>
+			<p class="product-details">
+				<?php 
 				echo $row['Pro_desc'];
 				#desc
-				?>-->
+				?>
 				
 			</p>
 		</div>
 	</div>
 </div>
 	<div class="container-fluid">
-		<h3>Preview</h3>
-		<p>
-			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-			<!-- <?php 
+		<div class="container">
+		<h3 class="long-desc-head">Preview</h3>
+		<p class="long-desc">
+			
+			<?php 
 			#details
-				echo $row['Pro_desc'];
-			?>-->
+				echo $row['Pro_details'];
+			?>
 		</p>
 
 </div> 
